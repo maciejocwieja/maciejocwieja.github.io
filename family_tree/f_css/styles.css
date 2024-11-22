@@ -1,0 +1,174 @@
+#tree {
+    cursor: grab;
+    margin-top: 10%;
+}
+
+.controls {
+    position: fixed;
+    bottom: 52px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer-label {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+.controls button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    background: #916800;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px #6849131a;
+    transition: all 0.2s;
+}
+
+.controls button:hover {
+    background: #6b4d00;
+    transform: translateY(-1px);
+}
+#tree:active {
+    cursor: grabbing;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 1000;
+    scrollbar-width: thick;
+}
+
+/* Desktop/Landscape: right side */
+@media (min-width: 768px) and (orientation: landscape) {
+    #popup {
+        width: 35%;
+        height: 100%;
+            top: 82px;
+        right: 0;
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.2),
+            -2px 0 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Mobile/Portrait: top section */
+@media (max-width: 767px),
+(orientation: portrait) {
+    #popup {
+        width: auto;
+        height: 60vh;
+        min-height: 300px;
+        max-height: 60vh;
+        top: 0;
+        right: 0;
+        left: 0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.person-info {
+    height: auto;
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-right: 4px;
+    margin-bottom: 60px;
+    text-align: justify;
+}
+
+#popup .close {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    cursor: pointer;
+    font-size: 28px;
+    color: #3d3304
+}
+
+.person-info h3 {
+    margin: 20px 0 10px 0;
+    color: #333;
+    padding-right: 20px;
+}
+
+.person-info p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.info {
+    font-style: italic;
+}
+
+.years {
+    color: #666;
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.toast {
+    background: #67511ce9;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#tree g.node {
+    cursor: pointer;
+}
+
+#tree g.node:hover rect {
+    filter: brightness(0.95);
+}
+
+#popup::-webkit-scrollbar {
+    width: 16px;
+}
+
+#popup::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+#popup::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+    border: 3px solid #f1f1f1;
+}
+
+#popup::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}

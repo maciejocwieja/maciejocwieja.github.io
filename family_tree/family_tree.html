@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rodzina</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="../css/templatemo_style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="f_css/styles.css">
+
+</head>
+<body>
+    <nav id="responsive-menu">
+        <ul class="menu-holder">
+            <li><a href="../index.html"><i class="fa fa-home"></i>O mnie</a></li>
+            <li class="active"><a href="#"><i class="fa fa-briefcase"></i>Rodzina</a></li>
+            <li><a href="../gallery/gallery_index.html"><i class="fa fa-cogs"></i>Galeria</a></li>
+        </ul>
+    </nav>
+    <div class="templatemo-site-header">
+		<div class="container">
+			<div class="row templatemo-position-relative">				
+				<nav class="hidden-xs text-uppercase templatemo-nav">
+					<ul class="menu-holder">
+						<li><a href="../index.html">O mnie</a></li>
+						<li class="active"><a href="#">Rodzina</a></li>
+						<li><a href="../gallery/gallery_index.html">Galeria</a></li>					
+					</ul>
+				</nav>
+				<h1 class="templatemo-site-name">
+                	<span class="templatemo-brown">1938-2024</span> 
+                	<span class="templatemo-gold">Maciej Oćwieja</span>
+                </h1>
+				<div class="text-right visible-xs">
+		            <a href="#" id="mobile_menu"><span class="fa fa-bars"></span></a>
+		        </div>
+			</div>
+		</div>    	
+    </div>
+    <div id="popup">
+        <span class="close" onclick="closePopup()">×</span>
+        <div class="person-info"></div>
+    </div>
+    <div id="toast-container" class="toast-container"></div>
+    <div id="fcontainer">
+        <div id="tree">
+            <pre class="mermaid">
+                %%{init: {'theme':'base', 'themeVariables': { 'fontFamily': 'arial' }}}%%
+flowchart TD
+    n1_2(["Katarzyna & Franciszek\nOćwieja"]):::gen0ocwieja
+    n3_4(["Anna & Jakub\nOrszula"]):::gen0orszula
+    n5["Jadwiga\nOćwieja"]:::gen1ocwieja
+    n6["Maria\nRatowska"]:::gen1ocwieja
+    n7_17["Franciszek & Stefania\nOćwieja"]:::gen1ocwieja
+    n8_15["Michał & Franciszka\nOćwieja"]:::gen1ocwieja_stroke
+    n9_22["Stefan & Julia\nOćwieja"]:::gen1ocwieja
+    n10_26["Karol & Czesława\nOrszula"]:::gen1orszula
+    n11["Ludwik\nOrszula"]:::gen1orszula
+    n12["Władysław\nOrszula"]:::gen1orszula
+    n13_30["Stefania & Stanisław\nDzióbacka"]:::gen1orszula
+    n14_31["Janina & Zbigniew\nZasadzka"]:::gen1orszula
+    n16_34["Maria & Jakub\nŚwięch"]:::gen1orszula
+    n18_35["Barbara & Edward\nDrwal"]:::gen2ocwieja
+    n19_36["Jacek & Mila\nOćwieja"]:::gen2ocwieja
+    n20_39["Maciej & Jadwiga\nOćwieja"]:::memorialNode
+    n21_40["Michał & Barbara\nOćwieja"]:::gen2ocwieja
+    n23_43["Wanda & Mieczysław\nPyrek"]:::gen2ocwieja
+    n24_46["Roman & Helena\nOćwieja"]:::gen2ocwieja
+    n25["Jan\nOćwieja"]:::gen2ocwieja
+    n27_49["Rajmund & Regina\nOrszula"]:::gen2orszula
+    n28["Eugeniusz\nOrszula"]:::gen2orszula
+    n29_53["Józefa & Jerzy\nJeziorska"]:::gen2orszula
+    n32_58["Sławomir & Bogusława\nZasadzki"]:::gen2orszula
+    n33_60["Grażyna & Henryk\nBober"]:::gen2orszula
+    n55_56["Henryk & Zofia\nDzióbacki"]:::gen2orszula
+    n62_63["Ignacy & Elżbieta\nŚwięch"]:::gen2orszula
+    n37["Franciszek\nDrwal"]:::gen3ocwieja
+    n38["Andrzej\nOćwieja"]:::gen3ocwieja
+    n41["Marek\nOćwieja"]:::gen3ocwieja
+    n42["Anna\nBembenek"]:::gen3ocwieja
+    n44["Waldemar\nPyrek"]:::gen3ocwieja
+    n45["Grażyna\nPyrek"]:::gen3ocwieja
+    n47["Andrzej\nOćwieja"]:::gen3ocwieja
+    n48["Magdalena\nOćwieja"]:::gen3ocwieja
+    n50["Renata\nSolonek"]:::gen3orszula
+    n51["Róża Danuta\nOrszula"]:::gen3orszula
+    n54["Roman\nJeziorski"]:::gen3orszula
+    n57["Małgorzata\nDzióbacka"]:::gen3orszula
+    n59["Jacek\nZnamirowski"]:::gen3orszula
+    n61["Halina\nBober"]:::gen3orszula
+    n64["Jolanta\nŚwięch"]:::gen3orszula
+    n65["Dorota\nMadura"]:::gen3orszula
+
+    n1_2 -->  n7_17 & n5 & n6 & n9_22 & n8_15 
+    n3_4 --> n8_15 & n13_30 & n11 & n10_26 & n12 & n14_31 & n16_34
+    n7_17 --> n18_35 & n19_36
+    n8_15 --> n21_40 & n20_39
+    n9_22 --> n23_43 & n24_46 & n25
+    n10_26 --> n27_49 & n28 & n29_53
+    n13_30 --> n55_56
+    n14_31 --> n32_58 & n33_60
+    n16_34 --> n62_63
+    n18_35 --> n37
+    n19_36 --> n38
+    n21_40 --> n41 & n42
+    n23_43 --> n44 & n45
+    n24_46 --> n47 & n48
+    n27_49 --> n50 & n51
+    n29_53 --> n54
+    n55_56 --> n57
+    n32_58 --> n59
+    n33_60 --> n61
+    n62_63 --> n64 & n65
+
+    %% Style definitions
+    classDef default font-size:19px,stroke-width:1px
+    classDef gen0ocwieja font-size:19px,fill:#e6f3ff,stroke:#2d5986
+    classDef gen0orszula font-size:19px,fill:#ffe6e6,stroke:#862d2d
+    classDef gen1ocwieja font-size:19px,fill:#cce6ff,stroke:#2d5986
+    classDef gen1orszula font-size:19px,fill:#ffcccc,stroke:#862d2d
+    classDef gen2ocwieja font-size:19px,fill:#b3d9ff,stroke:#2d5986
+    classDef gen2orszula font-size:19px,fill:#ffb3b3,stroke:#862d2d
+    classDef gen3ocwieja font-size:19px,fill:#99ccff,stroke:#2d5986
+    classDef gen3orszula font-size:19px,fill:#ff9999,stroke:#862d2d
+    classDef gen1ocwieja_stroke font-size:19px,fill:#cce6ff,stroke:#862d2d, stroke-width:2px
+    classDef memorialNode font-size:19px,fill:#b3d9ff,stroke:#862d2d,stroke-width:3px,stroke-dasharray: 4 4
+            </pre>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="zoomIn()">Powiększ (+)</button>
+        <button onclick="zoomOut()">Pomniejsz (-)</button>
+        <button onclick="resetView()">Resetuj widok</button>
+    </div>
+    <div class="footer-label">
+        <p>Drzewo genealogiczne rodzin Oćwieja i Orszula</p>
+    </div>
+
+    <script src="f_js/data.js"></script>
+    <script src="f_js/app.js"></script>
+</body>
+</html>
