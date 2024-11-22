@@ -114,7 +114,7 @@ a.menu-toggle-btn {
 
 .responsive-menu {
   display: none;
-  background: #343536;
+  background: #a6903b;
 }
 
 .responsive_menu {
@@ -439,21 +439,22 @@ a.menu-toggle-btn {
   transition: all 50ms ease-in-out;
 }
 .gallery-item .overlay a {
-  color: #2a2a2a;
-  width: 32px;
-  height: 32px;
-  background-color: #d3b850;
+  color: #cda000d2;
+  width: 48px;
+  height: 48px;
+  background-color: #7b682800;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 3px;
   text-align: center;
-  line-height: 32px;
+  line-height: 48px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -16px;
-  margin-left: -16px;
+  margin-top: -24px;
+  margin-left: -24px;
+  scale: 3;
 }
 .templatemo_gallerygap { margin-bottom: 13%; }
 .templatemo_gallerygap img{ margin-top: 30px; }
